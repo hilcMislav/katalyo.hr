@@ -1,0 +1,1864 @@
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+        * {
+            font-family: 'Roboto', Arial, sans-serif;
+            --primary-color: #00A4B9;
+            --secondary-color: #0048B9;
+            --sceondary-bg-color: #F1F7FF;
+            --primary-card-color: #F8FEFF;
+            --secondary-card-color: #F9FBFF;
+            --dark-color: #383a49;
+            --primary-color-hover: #048fa1;
+            --primary-color-active: #10bfd6;
+            --blockquote-bg-color: #F1F7FF;
+            --yellow-color: #FFC01F;
+            --red-color: #FC928C;
+            --purple-color: #9747FF;
+            --blue-color: #3466C5;
+            --yellow-bg: #FFFEFB;
+            --red-bg: #FFFDFD;
+            --turqoise-bg: #FAFDFE;
+            --purple-bg: #FDFBFF;
+            color: var(--dark-color);
+        }
+
+        svg .rotate {
+            transform-box: fill-box;
+            transform-origin: center;
+        }
+
+        .rotate {
+            animation: 3s linear infinite rotate-con;
+        }
+
+        .translate {
+            animation: 3s linear translate-it;
+        }
+
+        @keyframes translate-it {
+            0% {
+                transform: translate(-686px, 111px);
+            }
+
+            10% {
+                transform: translate(-610px, 95px);
+            }
+
+            20% {
+                transform: translate(-550px, -5px);
+            }
+
+            30% {
+                transform: translate(-480px, 20px);
+            }
+
+            40% {
+                transform: translate(-420px, -5px);
+            }
+
+            50% {
+                transform: translate(-375px, -25px);
+            }
+
+            60% {
+                transform: translate(-265px, -115px);
+            }
+
+            70% {
+                transform: translate(-203px, -75px);
+            }
+
+            80% {
+                transform: translate(-163px, -75px);
+            }
+
+            90% {
+                transform: translate(-63px, -135px);
+            }
+
+            95% {
+                transform: translate(-23px, -100px);
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+
+        @keyframes rotate-con {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .text-yellow {
+            color: var(--yellow-color);
+        }
+
+        .text-red {
+            color: var(--red-color);
+        }
+
+        .text-purple {
+            color: var(--purple-color);
+        }
+
+        .text-blue {
+            color: var(--blue-color);
+        }
+
+        .bg-yellow {
+            background-color: var(--yellow-bg) !important;
+        }
+
+        .bg-turqoise {
+            background-color: var(--turqoise-bg) !important;
+        }
+
+        .bg-red {
+            background-color: var(--red-bg) !important;
+        }
+
+        .bg-purple {
+            background-color: var(--purple-bg) !important;
+        }
+
+        span {
+            color: white !important;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .flexbox {
+            display: flex;
+            gap: 24px;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .grid-columns-12 {
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        a>i {
+            color: white;
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        h1 {
+            font-size: 6rem;
+            line-height: 6.75rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 5rem;
+            line-height: 6.75rem;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            grid-column: span 12;
+        }
+
+        h3 {
+            font-size: 3rem;
+            line-height: 3.5rem;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h4 {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h5 {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h6 {
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+            font-weight: 500;
+            text-align: center;
+            margin: 0;
+        }
+
+        article#nocode>section>h5 {
+            text-align: center;
+
+        }
+
+        section>h5 {
+            text-align: left;
+            font-size: 2.75rem;
+            line-height: 3.25rem;
+        }
+
+        section>p {
+            text-align: left;
+            font-size: 2rem;
+            line-height: 2.25rem;
+        }
+
+        blockquote {
+            font-size: 2.75rem;
+            line-height: 3.25rem;
+            color: var(--secondary-color);
+            grid-column: span 12;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .text-primary {
+            color: var(--primary-color);
+        }
+
+        .text-secondary {
+            color: var(--secondary-color);
+        }
+
+        .polka-dot-bg {
+            background-color: #deedf9;
+            opacity: 1;
+            /*background-image: radial-gradient(#ffffff 1.25px, #deedf9 1.25px);*/
+            background-size: 25px 25px;
+        }
+
+        .logo {
+            grid-column: span 2;
+        }
+
+        #logo,
+        #logo2 {
+            width: 70%;
+        }
+
+        nav {
+            grid-column: span 10;
+        }
+
+        .justify-content-end {
+            justify-content: end;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        a {
+            color: var(--dark-color) !important;
+            text-decoration: none;
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        div[role="banner"] {
+            position: fixed;
+            top: -1px;
+            visibility: visible;
+            opacity: 1;
+            z-index: 1000;
+            transition: top 0.6s, opacity 0.4s, visibility 0.4s, background-color 0.4s ease-in;
+        }
+
+        .is-visible {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+            box-shadow: 0px 6px 4px rgba(56, 58, 73, 0.05);
+            display: grid !important;
+        }
+
+        .ham-visible {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+            box-shadow: 0px 6px 4px rgba(56, 58, 73, 0.05);
+            display: grid !important;
+        }
+
+        .outer-wraper {
+            gap: 0 !important;
+        }
+
+        .inner-wraper {
+            grid-column: span 12;
+            padding: 36px 360px 36px 360px;
+        }
+
+        .visible {
+            background-color: white;
+            box-shadow: 0px 6px 4px rgba(56, 58, 73, 0.05);
+            display: grid !important;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #main {
+            grid-column: span 6;
+        }
+
+        article#header {
+            padding: 0 360px;
+            column-gap: 160px;
+        }
+
+        article#header>div#main>h4 {
+            text-align: left;
+        }
+
+        .button {
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+            text-decoration: none;
+            color: white !important;
+            padding: 16px 24px;
+            background-color: var(--primary-color);
+            border-radius: 30px;
+            width: fit-content;
+        }
+
+        .button:hover {
+            background-color: var(--primary-color-hover)
+        }
+
+        .button:active {
+            background-color: var(--primary-color-active);
+        }
+
+        h1>b {
+            color: var(--primary-color);
+        }
+
+        h2>b {
+            color: var(--primary-color);
+        }
+
+        h4>b {
+            color: var(--primary-color);
+        }
+
+        article#digitalizacija {
+            scroll-margin-top: 5vh;
+            padding: 240px 360px;
+            row-gap: 240px !important;
+            column-gap: 160px !important;
+            background: linear-gradient(180deg, #F0FDFF 0%, #F1F7FF 100%);
+        }
+
+        article#kako {
+            scroll-margin-top: 5vh;
+            padding: 240px 360px;
+            row-gap: 240px !important;
+            column-gap: 160px !important;
+            background: linear-gradient(180deg, #F0FDFF 0%, #F0F6FF 100%);
+        }
+
+        header {
+            gap: 128px !important;
+            padding: 320px 0 360px 0;
+        }
+
+        figure {
+            grid-column: span 6;
+            margin: 0;
+        }
+
+        video {
+            grid-column: span 6;
+            /*border: 2px solid #ffffff;
+            border-radius: 4px;*/
+        }
+
+        figure>img {
+            width: 100%;
+        }
+
+        section {
+            gap: 48px !important;
+            padding: 36px;
+            box-shadow: 0px 4px 8px rgba(15, 26, 28, 0.07);
+            border-radius: 12px;
+        }
+
+        article#digitalizacija>section {
+            grid-column: span 6;
+            /*background-color: var(--primary-card-color);*/
+            box-shadow: none !important;
+            align-self: center;
+            justify-self: center;
+        }
+
+        article#kako>section {
+            grid-column: span 6;
+            /*background-color: var(--primary-card-color);*/
+            box-shadow: none !important;
+            align-self: center;
+            justify-self: center;
+        }
+
+        i {
+            font-size: 3rem;
+            line-height: 1;
+        }
+
+        article#quote>i {
+            color: var(--secondary-color);
+            font-size: 3rem;
+            line-height: 1;
+            grid-column: span 12;
+            text-align: center;
+        }
+
+        article#quote {
+            row-gap: 64px !important;
+            background-color: var(--blockquote-bg-color);
+            padding: 160px 360px;
+        }
+
+        article#nocode {
+            scroll-margin-top: 5vh;
+            gap: 80px 24px !important;
+            padding: 160px 360px;
+            background: linear-gradient(180deg, #F1F7FF 0%, #F0FDFF 100%);
+        }
+
+        article#nocode>h2>b {
+            color: var(--secondary-color);
+        }
+
+        article#nocode>section {
+            background-color: var(--secondary-card-color);
+            grid-column: span 3;
+        }
+
+        article#nocode>section {
+            grid-column: span 3;
+        }
+
+        article#rješenja {
+            scroll-margin-top: 5vh;
+            gap: 120px 0 !important;
+            padding: 240px 360px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .slider {
+            grid-column: span 10;
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            max-width: 100%;
+        }
+
+        div.slider>figure {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            flex-shrink: 0;
+            scroll-snap-align: center;
+        }
+
+        .slider::-webkit-scrollbar {
+            height: 0;
+            width: 0;
+        }
+
+        .slider::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        .slider::-webkit-scrollbar-thumb {
+            background-color: transparent;
+            border-radius: 0.25rem;
+        }
+
+        .prev-btn {
+            grid-column: span 1;
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            border-radius: 100%;
+            border: none;
+            opacity: 0.8;
+            background: var(--primary-card-color);
+            padding: 0;
+        }
+
+        .next-btn {
+            grid-column: span 1;
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            border-radius: 100%;
+            border: none;
+            opacity: 0.8;
+            background: var(--primary-card-color);
+            font-size: 24px !important;
+            padding: 0;
+        }
+
+
+        .prev-btn>i {
+            font-size: 24px !important;
+            color: var(--dark-color);
+        }
+
+
+        .next-btn>i {
+            font-size: 24px !important;
+            color: var(--dark-color);
+        }
+
+        .screenshot {
+            width: 70%;
+        }
+
+        article#proces {
+            scroll-margin-top: 5vh;
+            gap: 120px 0 !important;
+            padding: 160px 640px;
+            background: linear-gradient(180deg, #F0F6FF 0%, #EFFCFF 100%);
+        }
+
+        article#proces>figure {
+            grid-column: span 12;
+        }
+
+        /*article#proces>figure>img {
+            width: 75%;
+        }*/
+
+        .carder {
+            grid-column: span 12;
+            row-gap: 72px;
+        }
+
+        .carder>section {
+            grid-column: span 12;
+            /*background-color: var(--primary-card-color);*/
+            box-shadow: none !important;
+            padding: 0 48px;
+        }
+
+        .carder>section>h4 {
+            text-align: left;
+        }
+
+        .carder>section>p {
+            text-align: left;
+        }
+
+        .carder>section>i {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+        }
+
+        a#top {
+            position: fixed;
+            right: 64px;
+            bottom: 64px;
+            height: 48px;
+            width: 48px;
+            background-color: var(--primary-card-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            box-shadow: 0px 4px 8px rgba(15, 26, 28, 0.15);
+        }
+
+        a#top>i {
+            font-size: 32px;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .hamburger:focus-visible {
+            outline: none;
+        }
+
+        .small {
+            grid-column: span 12;
+            display: none;
+            opacity: 0;
+            /*transform: translateY(-100%);*/
+            flex-direction: column;
+            align-items: center;
+            gap: 12px !important;
+            height: 100vh;
+            padding: 24px 240px 24px 240px;
+            transition: opacity 0.4s; /*transform 0.3s ease-in-out*/
+        }
+
+        .fa-xmark {
+            display: none;
+        }
+
+        .inline-block {
+            display: inline-block !important;
+        }
+
+        .d-none {
+            display: none !important;
+        }
+
+        .ham-show {
+            display: flex !important;
+            /*transform: translate(0%);*/
+        }
+
+        .ham-transit {
+            opacity: 1;
+        }
+
+        .donja-figure2 {
+            display: none;
+        }
+
+        .donja-figure3 {
+            display: none;
+        }
+
+        .illustration {
+            grid-column: span 6;
+            width: 100%;
+            align-self: center;
+            justify-self: center;
+        }
+
+        @media screen and (max-width: 2430px) {
+
+            .inner-wraper {
+                padding: 24px 240px 24px 240px;
+            }
+
+            .small {
+                padding: 12px 120px 12px 120px;
+            }
+
+            article#header {
+                padding: 0 240px;
+                gap: 120px !important;
+            }
+
+            article#digitalizacija {
+                padding: 160px 240px;
+                gap: 120px 160px !important;
+            }
+
+            article#kako {
+                padding: 160px 240px;
+                gap: 120px 160px !important;
+            }
+
+            article#quote {
+                padding: 160px 240px;
+            }
+
+            article#nocode {
+                padding: 160px 240px;
+                gap: 80px 24px !important;
+            }
+
+            article#nocode>h2 {
+                padding: 0 48px;
+            }
+
+            article#rješenja {
+                padding: 160px 240px;
+                gap: 48px 0 !important;
+            }
+
+            article#proces {
+                padding: 160px 480px;
+                gap: 48px 24px !important;
+            }
+
+            header {
+                gap: 80px !important;
+            }
+
+            .screenshot {
+                width: 50%;
+            }
+
+            /*a {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }*/
+
+        }
+
+        @media screen and (max-width: 2230px) {
+
+            h1 {
+                font-size: 4rem;
+                line-height: 4.75rem;
+            }
+
+            h2 {
+                font-size: 3.25rem;
+                line-height: 4rem;
+            }
+
+            h3 {
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+
+            h4 {
+                font-size: 1.75rem;
+                line-height: 2.75rem;
+            }
+
+            h5 {
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+            }
+
+            h6 {
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+            }
+
+            i {
+                font-size: 2.25rem;
+            }
+
+            p {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+
+            section>h5 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            section>p {
+                font-size: 1.5rem;
+                line-height: 1.75rem;
+            }
+
+            .inner-wraper {
+                padding: 24px 240px 24px 240px;
+            }
+
+            .small {
+                padding: 12px 120px 12px 120px;
+            }
+
+            article#header {
+                padding: 0 240px;
+            }
+
+            article#digitalizacija {
+                padding: 80px 240px;
+                gap: 80px !important;
+            }
+
+            article#kako {
+                padding: 80px 240px;
+                gap: 80px !important;
+            }
+
+            article#quote {
+                padding: 80px 240px;
+            }
+
+            article#nocode {
+                padding: 160px 240px;
+                gap: 80px 24px !important;
+            }
+
+            article#nocode>h2 {
+                padding: 0 48px;
+            }
+
+            article#rješenja {
+                padding: 80px 240px;
+                gap: 48px 0 !important;
+            }
+
+            article#proces {
+                padding: 80px 480px;
+                gap: 48px 24px !important;
+            }
+
+            header {
+                gap: 80px !important;
+            }
+
+            .screenshot {
+                width: 50%;
+            }
+
+            /*a {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }*/
+
+        }
+
+
+
+        @media screen and (max-width: 1920px) {
+
+            article#nocode>section>h5 {
+                font-size: 1.5rem;
+                line-height: 1.75rem;
+            }
+
+            blockquote {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            a#top {
+                right: 36px;
+                bottom: 36px;
+            }
+
+            .inner-wraper {
+                padding: 12px 120px 12px 120px;
+            }
+
+            .small {
+                padding: 12px 120px 12px 120px;
+            }
+
+            article#header {
+                padding: 0 120px;
+                gap: 80px !important;
+            }
+
+            article#digitalizacija {
+                padding: 80px 120px;
+                gap: 60px 24px !important;
+            }
+
+            article#kako {
+                padding: 80px 120px;
+                gap: 60px 24px !important;
+            }
+
+            article#quote {
+                padding: 80px 120px;
+                gap: 40px !important;
+            }
+
+            article#nocode {
+                padding: 80px 120px;
+                gap: 60px 24px !important;
+            }
+
+            article#nocode>h2 {
+                padding: 0 48px;
+            }
+
+            article#rješenja {
+                padding: 80px 120px;
+                gap: 48px 0 !important;
+            }
+
+            article#proces {
+                padding: 80px 240px;
+                gap: 60px 24px !important;
+            }
+
+            header {
+                padding: 120px 0 120px 0;
+                gap: 80px !important;
+            }
+
+            .screenshot {
+                width: 50%;
+            }
+
+            a {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+
+        }
+
+        @media screen and (max-width: 1440px) {
+
+            #logo,
+            #logo2 {
+                width: 100%;
+            }
+
+            #main {
+                gap: 16px !important;
+            }
+
+            h1 {
+                font-size: 3.25rem;
+                line-height: 4rem;
+            }
+
+            h2 {
+                font-size: 2.75rem;
+                line-height: 2.5rem;
+            }
+
+            h3 {
+                font-size: 2.25rem;
+                line-height: 2.75rem;
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                line-height: 1.75rem;
+            }
+
+            h5 {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+
+            h6 {
+                font-size: 1rem;
+                line-height: 1.25rem;
+            }
+
+            .button {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+                padding: 12px 20px;
+            }
+
+            section {
+                gap: 24px !important;
+                padding: 24px;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25rem;
+            }
+
+            i {
+                font-size: 2rem;
+            }
+
+            a {
+                font-size: 1rem;
+            }
+
+            section>h5 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            section>p {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+
+            blockquote {
+                font-size: 1.5rem;
+                line-height: 1.75rem;
+            }
+
+            article#quote>i {
+                font-size: 2rem;
+            }
+
+            article#digitalizacija {
+                gap: 48px !important;
+                padding: 120px 100px;
+            }
+
+            article#kako {
+                gap: 48px !important;
+                padding: 120px 100px;
+            }
+
+            article#quote {
+                gap: 48px !important;
+                padding: 40px 60px;
+            }
+
+            .inner-wraper {
+                padding: 12px 100px;
+            }
+
+            .small {
+                padding: 12px 60px 12px 60px;
+            }
+
+            article#header {
+                padding: 0 100px;
+            }
+
+            article#nocode {
+                padding: 40px 60px;
+                gap: 48px 16px !important;
+            }
+
+            article#nocode>h2 {
+                padding: 0;
+            }
+
+            article#rješenja {
+                padding: 40px 60px;
+                gap: 48px 0 !important;
+            }
+
+            article#proces {
+                padding: 120px 200px;
+                gap: 48px 16px !important;
+            }
+
+            header {
+                padding: 160px 0;
+                gap: 48px !important;
+            }
+
+            .carder>section>i {
+                width: 72px;
+                height: 72px;
+            }
+
+        }
+
+        @media screen and (max-width: 1280px) {
+
+            a>i {
+                font-size: 1rem;
+            }
+
+
+            section>h5 {
+                font-size: 1.75rem;
+                line-height: 2.25rem;
+            }
+
+            section>p {
+                font-size: 1rem;
+                line-height: 1.25rem;
+            }
+
+            article#nocode>section>h5 {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+
+
+            a#top {
+                right: 16px;
+                bottom: 16px;
+                height: 32px;
+                width: 32px;
+            }
+
+            a#top>i {
+                font-size: 20px;
+            }
+
+            #logo,
+            #logo2 {
+                width: 100%;
+            }
+
+            #main {
+                gap: 16px !important;
+            }
+
+            h1 {
+                font-size: 3.25rem;
+                line-height: 4rem;
+            }
+
+            h2 {
+                font-size: 2.75rem;
+                line-height: 2.5rem;
+            }
+
+            h3 {
+                font-size: 2.25rem;
+                line-height: 2.75rem;
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                line-height: 1.75rem;
+            }
+
+            h5 {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+
+            h6 {
+                font-size: 1rem;
+                line-height: 1.25rem;
+            }
+
+            .button {
+                font-size: 1rem;
+                line-height: 1.25rem;
+                padding: 8px 16px;
+            }
+
+            section {
+                gap: 24px !important;
+                padding: 24px;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.25rem;
+            }
+
+            i {
+                font-size: 2rem;
+            }
+
+            a {
+                font-size: 1rem;
+            }
+
+            article#quote>i {
+                font-size: 2rem;
+            }
+
+            article#digitalizacija {
+                padding: 100px 60px;
+            }
+
+            article#kako {
+                padding: 100px 60px;
+            }
+
+            article#quote {
+                gap: 24px !important;
+                padding: 100px 60px;
+            }
+
+            .inner-wraper {
+                padding: 12px 60px;
+            }
+
+            .small {
+                padding: 12px 60px 12px 60px;
+            }
+
+            article#header {
+                padding: 0 60px;
+                gap: 48px !important;
+            }
+
+            article#nocode {
+                padding: 100px 60px;
+                gap: 16px !important;
+            }
+
+            article#nocode>h2 {
+                padding: 0 0 32px 0;
+            }
+
+            article#rješenja {
+                padding: 100px 60px;
+                gap: 48px 0 !important;
+            }
+
+            article#proces {
+                padding: 100px 120px;
+                gap: 48px 16px !important;
+            }
+
+            header {
+                padding: 120px 0;
+                gap: 60px !important;
+            }
+
+        }
+
+        @media screen and (max-width: 956px) {
+
+            h1 {
+                font-size: 2.75rem;
+                line-height: 3rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.75rem;
+                line-height: 2.25rem;
+            }
+
+            h4 {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+
+            h5 {
+                font-size: 1rem;
+                line-height: 1.25rem;
+            }
+
+            h6 {
+                font-size: 0.875rem;
+                line-height: 1rem;
+            }
+
+            p {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+
+            blockquote {
+                margin: 0;
+                font-size: 1.25rem;
+                line-height: 2rem;
+            }
+
+            .button {
+                font-size: 1rem;
+                line-height: 1.25rem;
+                padding: 8px 16px;
+            }
+
+            .hamburger {
+                display: block;
+                border: none;
+                background-color: transparent;
+            }
+
+            i[class="fa fa-bars"] {
+                font-size: 1.25rem;
+                line-height: 1;
+            }
+
+            .fa-xmark {
+                font-size: 1.5rem;
+                line-height: 1;
+            }
+
+            nav.big>a {
+                display: none;
+            }
+
+            article#nocode>section:nth-of-type(1) {
+                grid-column: span 6;
+            }
+
+            article#nocode>section:nth-of-type(2) {
+                grid-column: span 6;
+            }
+
+            article#nocode>section:nth-of-type(3) {
+                grid-column: span 6;
+            }
+
+            article#nocode>section:nth-of-type(4) {
+                grid-column: span 6;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            /*h1 {
+                font-size: 2.75rem;
+                line-height: 3rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.75rem;
+                line-height: 2.25rem;
+            }
+
+            h4 {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+
+            h5 {
+                font-size: 1rem;
+                line-height: 1.25rem;
+            }
+
+            h6 {
+                font-size: 0.875rem;
+                line-height: 1rem;
+            }
+
+            p {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+
+            blockquote {
+                margin: 0;
+                font-size: 1.25rem;
+                line-height: 2rem;
+            }
+
+            .button {
+                font-size: 1rem;
+                line-height: 1.25rem;
+                padding: 8px 16px;
+            }
+
+            i[class="fa fa-bars"] {
+                font-size: 1.25rem;
+                line-height: 1;
+            }
+            }*/
+
+            i {
+                font-size: 1.5rem;
+            }
+
+            .carder>section>i {
+                width: 48px;
+                height: 48px;
+            }
+
+            article#header {
+                padding: 0 60px;
+                gap: 24px 0 !important;
+            }
+
+            .carder>section>i {
+                width: 64px;
+                height: 64px;
+            }
+
+            header {
+                padding: 100px 0;
+                gap: 32px !important;
+            }
+
+            #main {
+                grid-column: span 12;
+                align-items: center;
+            }
+
+            article#header>div#main>h6,
+            article#header>div#main>h1,
+            article#header>div#main>h4 {
+                text-align: center;
+            }
+
+            figure {
+                grid-column: span 12;
+                display: flex;
+                justify-content: center;
+            }
+
+            video {
+                grid-column: span 12;
+            }
+
+            figure>img {
+                width: 70%;
+            }
+
+            article#header {
+                gap: 48px 16px;
+                padding: 0 48px;
+            }
+
+            article#digitalizacija>h2 {
+                grid-area: 1 / 1 / 2 / 13;
+            }
+
+            article#digitalizacija>section:nth-of-type(1) {
+                grid-area: 3 / 1 / 4 / 13;
+            }
+
+            article#digitalizacija>section:nth-of-type(2) {
+                grid-area: 5 / 1 / 6 / 13;
+            }
+
+            article#digitalizacija>section:nth-of-type(3) {
+                grid-area: 7 / 1 / 8 / 13;
+            }
+
+            article#digitalizacija>.illustration:nth-of-type(1) {
+                grid-area: 2 / 4 / 3 / 10;
+            }
+
+            article#digitalizacija>.illustration:nth-of-type(2) {
+                grid-area: 4 / 4 / 5 / 10;
+            }
+
+            article#digitalizacija>.illustration:nth-of-type(3) {
+                grid-area: 6 / 4 / 7 / 10;
+            }
+
+            article#nocode>section:nth-of-type(1) {
+                grid-column: span 6;
+            }
+
+            article#nocode>section:nth-of-type(2) {
+                grid-column: span 6;
+            }
+
+            article#nocode>section:nth-of-type(3) {
+                grid-column: span 6;
+            }
+
+            article#nocode>section:nth-of-type(4) {
+                grid-column: span 6;
+            }
+
+            article#nocode>section:nth-of-type(5) {
+                grid-column: span 12;
+            }
+
+            article#nocode>section:nth-of-type(6) {
+                grid-column: span 12;
+            }
+
+            article#nocode>section:nth-of-type(7) {
+                grid-column: span 12;
+            }
+
+            article#kako>section:nth-of-type(1) {
+                grid-area: 3 / 1 / 4 / 13;
+            }
+
+            article#kako>section:nth-of-type(2) {
+                grid-area: 5 / 1 / 6 / 13;
+            }
+
+            article#kako>section:nth-of-type(3) {
+                grid-area: 7 / 1 / 8 / 13;
+            }
+
+            article#kako>section:nth-of-type(4) {
+                grid-area: 9 / 1 / 10 / 13;
+            }
+
+            article#kako>section:nth-of-type(5) {
+                grid-area: 11 / 1 / 12 / 13;
+            }
+
+            article#kako>h2 {
+                grid-area: 1 / 1 / 2 / 13;
+            }
+
+            article#kako>.illustration:nth-of-type(1) {
+                grid-area: 2 / 4 / 3 / 10;
+            }
+
+            article#kako>.illustration:nth-of-type(2) {
+                grid-area: 4 / 4 / 5 / 10;
+            }
+
+            article#kako>.illustration:nth-of-type(3) {
+                grid-area: 6 / 4 / 7 / 10;
+            }
+
+            article#kako>.illustration:nth-of-type(4) {
+                grid-area: 8 / 4 / 9 / 10;
+            }
+
+            article#kako>.illustration:nth-of-type(5) {
+                grid-area: 10 / 4 / 11 / 10;
+            }
+
+            article#kako {
+                gap: 24px !important;
+                padding: 60px 48px;
+            }
+
+            article#digitalizacija {
+                gap: 24px 0 !important;
+                padding: 60px 48px;
+            }
+
+            article#nocode>section>h5 {
+                font-size: 1rem;
+                line-height: 1.25rem;
+            }
+
+            article#quote {
+                padding: 60px 48px;
+            }
+
+            article#nocode {
+                padding: 60px 48px;
+            }
+
+            article#proces {
+                padding: 60px 48px;
+            }
+
+            .inner-wraper {
+                padding: 12px 48px;;
+            }
+
+            section>h5 {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
+
+            section>p {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+
+            .screenshot {
+                width: 75%;
+            }
+
+            .next-btn,
+            .prev-btn {
+                display: none;
+            }
+
+            .slider {
+                grid-column: span 12;
+            }
+
+            .carder>section {
+                grid-column: span 12;
+                padding: 0 24px;
+            }
+
+            .donja-figure {
+                display: none;
+            }
+
+            .donja-figure2 {
+                display: block;
+                grid-column: span 12;
+            }
+
+            .donja2 {
+                width: 100%;
+            }
+
+            a#top {
+                right: 8px;
+            }
+
+            .logo {
+                grid-column: span 3;
+            }
+
+            nav {
+                grid-column: span 9;
+            }
+
+            .carder {
+                gap: 48px 0 !important;
+            }
+
+        }
+
+        @media screen and (max-width: 500px) {
+
+            article#digitalizacija>.illustration:nth-of-type(1) {
+                grid-area: 2 / 2 / 3 / 12;
+            }
+
+            article#digitalizacija>.illustration:nth-of-type(2) {
+                grid-area: 4 / 2 / 5 / 12;
+            }
+
+            article#digitalizacija>.illustration:nth-of-type(3) {
+                grid-area: 6 / 2 / 7 / 12;
+            }
+
+            article#kako>.illustration:nth-of-type(1) {
+                grid-area: 2 / 2 / 3 / 12;
+            }
+
+            article#kako>.illustration:nth-of-type(2) {
+                grid-area: 4 / 2 / 5 / 12;
+            }
+
+            article#kako>.illustration:nth-of-type(3) {
+                grid-area: 6 / 2 / 7 / 12;
+            }
+
+            article#kako>.illustration:nth-of-type(4) {
+                grid-area: 8 / 2 / 9 / 12;
+            }
+
+            article#kako>.illustration:nth-of-type(5) {
+                grid-area: 10 / 2 / 11 / 12;
+            }
+
+            a#top {
+                display: none;
+            }
+
+            .donja-figure2 {
+                display: none;
+            }
+
+            .donja-figure3 {
+                display: flex;
+                grid-column: span 12;
+            }
+
+            .donja3 {
+                width: 50%;
+            }
+
+            figure>img {
+                width: 100%;
+            }
+
+            article#digitalizacija {
+                gap: 16px !important;
+                padding: 48px 24px;
+            }
+
+            article#kako {
+                gap: 16px !important;
+                padding: 48px 24px;
+            }
+
+            article#quote {
+                gap: 24px !important;
+                padding: 48px 24px;
+            }
+
+            .inner-wraper {
+                padding: 12px 24px;
+            }
+
+            .small {
+                padding: 12px 24px 12px 24px;
+            }
+
+            article#header {
+                padding: 0 24px;
+            }
+
+            article#nocode {
+                padding: 48px 24px;
+                gap: 24px 16px !important;
+            }
+
+            article#rješenja {
+                padding: 48px 24px;
+                gap: 24px 0 !important;
+            }
+
+            article#proces {
+                padding: 48px 24px;
+                gap: 24px 16px !important;
+            }
+
+            /*header {
+                padding: 0 0 36px 0;
+                gap: 60px !important;
+            }*/
+
+            figcaption {
+                gap: 12px !important;
+            }
+        }
+
+        @media screen and (max-width: 426px) {
+
+            .logo {
+                grid-column: span 4;
+            }
+
+            nav {
+                grid-column: span 8;
+                gap: 0 !important;
+            }
+
+            h1 {
+                font-size: 2.25rem;
+                line-height: 2.75rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+                line-height: 2.25rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+
+            h4 {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+
+            h5 {
+                font-size: 1rem;
+                line-height: 1.25rem;
+            }
+
+            h6 {
+                font-size: 0.75rem;
+                line-height: 1rem;
+            }
+
+            p {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+
+            blockquote {
+                margin: 0;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                padding: 0 24px;
+            }
+
+            .button {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                padding: 6px 12px;
+            }
+
+            article#digitalizacija {
+                gap: 16px 0 !important;
+                padding: 60px 16px;
+            }
+
+            article#kako {
+                gap: 16px 0 !important;
+                padding: 60px 16px;
+            }
+
+            article#quote {
+                gap: 16px 0 !important;
+                padding: 60px 16px;
+            }
+
+            header {
+                padding: 100px 0 60px 0;
+            }
+
+            .inner-wraper {
+                padding: 12px 16px;
+                gap: 0px;
+            }
+
+            .small {
+                padding: 12px 16px 12px 16px;
+            }
+
+            article#header {
+                padding: 0 16px;
+            }
+
+            article#nocode {
+                padding: 60px 16px;
+                gap: 24px 16px !important;
+            }
+
+            article#rješenja {
+                padding: 60px 16px;
+                gap: 24px 0 !important;
+            }
+
+            article#proces {
+                padding: 60px 16px;
+                gap: 16px 0 !important;
+            }
+
+            article#quote>i {
+                font-size: 1.5rem;
+            }
+
+            .carder {
+                gap: 24px 0 !important;
+            }
+
+            /*div[role="banner"] {
+                gap: 16px;
+            }*/
+
+            .carder>section>i {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        @media screen and (max-width: 319px) {
+
+            article#nocode>section:nth-of-type(1) {
+                grid-column: span 12;
+            }
+
+            article#nocode>section:nth-of-type(2) {
+                grid-column: span 12;
+            }
+
+            article#nocode>section:nth-of-type(3) {
+                grid-column: span 12;
+            }
+
+            article#nocode>section:nth-of-type(4) {
+                grid-column: span 12;
+            }
+        }
