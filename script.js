@@ -1,3 +1,47 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const svg = document.querySelector("#first"); // ID of the SVG element
+  const gPlaniranje = svg.querySelector("g.planiranje");
+  const divPlaniranje = document.querySelector("div#planiranje");
+  const gNabava = svg.querySelector("g.nabava");
+  const divNabava = document.querySelector("div#nabava");
+  const gUporaba = svg.querySelector("g.uporaba");
+  const divUporaba = document.querySelector("div#uporaba");
+  const gZbrinjavanje = svg.querySelector("g.zbrinjavanje");
+  const divZbrinjavanje = document.querySelector("div#zbrinjavanje");
+
+  gPlaniranje.addEventListener("mouseover", function () {
+    divPlaniranje.classList.add("opacity-1");
+  });
+
+  gPlaniranje.addEventListener("mouseout", function () {
+    divPlaniranje.classList.remove("opacity-1");
+  });
+
+  gNabava.addEventListener("mouseover", function () {
+    divNabava.classList.add("opacity-1");
+  });
+
+  gNabava.addEventListener("mouseout", function () {
+    divNabava.classList.remove("opacity-1");
+  });
+
+  gUporaba.addEventListener("mouseover", function () {
+    divUporaba.classList.add("opacity-1");
+  });
+
+  gUporaba.addEventListener("mouseout", function () {
+    divUporaba.classList.remove("opacity-1");
+  });
+
+  gZbrinjavanje.addEventListener("mouseover", function () {
+    divZbrinjavanje.classList.add("opacity-1");
+  });
+
+  gZbrinjavanje.addEventListener("mouseout", function () {
+    divZbrinjavanje.classList.remove("opacity-1");
+  });
+});
+
 /*** changes fixed as sticky style ***/
 
 window.addEventListener("scroll", function () {
@@ -53,7 +97,7 @@ window.addEventListener("scroll", function () {
 
 /*** slider code ***/
 
-const slider = document.querySelector(".slider");
+/*const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slider figure");
 
 let currentSlide = 0;
@@ -107,7 +151,7 @@ for (let i = 0; i < slides.length; i++) {
       behavior: "smooth",
     });
   });
-}
+}*/
 
 /*** hamburger menu code ***/
 
@@ -140,7 +184,7 @@ const hamburgerToggle = () => {
   });
 };
 
-document.addEventListener("click", (event) => {
+/*document.addEventListener("click", (event) => {
   const target = event.target;
   const navElements = document.querySelectorAll("nav.small");
   const nav = document.querySelector("#banner2");
@@ -154,7 +198,7 @@ document.addEventListener("click", (event) => {
       setTimeout(() => {
         navElement.classList.add("ham-show");
         /*xMark.classList.add("inline-block");
-        hamMmy.classList.add("d-none");*/
+        hamMmy.classList.add("d-none");
       }, 0);
     });
   }
@@ -180,4 +224,161 @@ document.addEventListener("click", (event) => {
       }, 0);
     });
   }
+});*/
+
+/*** Tabs code ***/
+
+document.getElementById("defaultOpen").click();
+
+function openProcess(evt, orderNumber) {
+  // Get all elements with class="tabcontent" and hide them
+  document.querySelectorAll(".tabcontent").forEach((content) => {
+    content.style.display = "none";
+  });
+
+  // Get all elements with class="tablinks" and remove the class "active-btn"
+  document.querySelectorAll(".tablinks").forEach((link) => {
+    link.classList.remove("active-btn");
+  });
+
+  // Show the current tab, and add an "active-btn" class to the button that opened the tab
+  document.getElementById(orderNumber).style.display = "flex";
+  evt.currentTarget.className += " active-btn";
+}
+
+/*** New Slider code ***/
+
+const prevContainer = document.querySelector('[data-slider="0"]');
+const curContainer = document.querySelector('[data-slider="1"]');
+const nextContainer = document.querySelector('[data-slider="2"]');
+
+function changeTab(tabIndex) {
+  const tabPanels = document.querySelectorAll(".tab-panel");
+  const currentTabPanel = document.getElementById(`tab-${tabIndex}`);
+  const tabs = document.querySelectorAll(".tab");
+
+  tabPanels.forEach((panel) => {
+    if (panel === currentTabPanel) {
+      panel.classList.add("show");
+      panel.classList.remove("slide-out");
+    } else {
+      panel.classList.remove("show");
+      panel.classList.add("slide-out");
+    }
+  });
+
+  tabs.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+
+  tabs[tabIndex - 1].classList.add("active");
+}
+
+function nextTab() {
+  const tabActive = document.querySelector(".show");
+  let tabIndex = tabActive.getAttribute("data-tab");
+  tabIndex *= 1;
+  if (tabIndex === 8) {
+    tabIndex = 1;
+  } else {
+    tabIndex += 1;
+  }
+  const tabPanels = document.querySelectorAll(".tab-panel");
+  const currentTabPanel = document.getElementById(`tab-${tabIndex}`);
+
+  tabPanels.forEach((panel) => {
+    if (panel === currentTabPanel) {
+      if (panel.classList.contains("slide-out")) {
+        panel.classList.remove("slide-out");
+        panel.classList.add("slide-in");
+        panel.classList.add("show");
+        panel.classList.remove("slide-in");
+      } else {
+        panel.classList.add("show");
+        panel.classList.remove("slide-in");
+      }
+    } else if (panel.classList.contains("show")) {
+      if (panel.classList.contains("slide-out")) {
+        panel.classList.remove("slide-out");
+        panel.classList.remove("show");
+        panel.classList.add("slide-out");
+      } else {
+        panel.classList.remove("show");
+        panel.classList.add("slide-out");
+      }
+    } else {
+      if (panel.classList.contains("slide-out")) {
+        panel.classList.remove("slide-out");
+        panel.classList.add("slide-in");
+      } else {
+        panel.classList.add("slide-in");
+      }
+    }
+  });
+}
+
+function prevTab() {
+  const tabActive = document.querySelector(".show");
+  let tabIndex = tabActive.getAttribute("data-tab");
+  tabIndex *= 1;
+  if (tabIndex === 1) {
+    tabIndex = 8;
+  } else {
+    tabIndex -= 1;
+  }
+  const tabPanels = document.querySelectorAll(".tab-panel");
+  const currentTabPanel = document.getElementById(`tab-${tabIndex}`);
+
+  tabPanels.forEach((panel) => {
+    if (panel === currentTabPanel) {
+      if (panel.classList.contains("slide-in")) {
+        panel.classList.remove("slide-in");
+        panel.classList.add("slide-out");
+        panel.classList.add("show");
+        panel.classList.remove("slide-out");
+      } else {
+        panel.classList.add("show");
+        panel.classList.remove("slide-out");
+      }
+    } else if (panel.classList.contains("show")) {
+      if (panel.classList.contains("slide-in")) {
+        panel.classList.remove("slide-in");
+        panel.classList.remove("show");
+        panel.classList.add("slide-in");
+      } else {
+        panel.classList.remove("show");
+        panel.classList.add("slide-in");
+      }
+    } else {
+      if (panel.classList.contains("slide-in")) {
+        panel.classList.remove("slide-in");
+        panel.classList.add("slide-out");
+      } else {
+        panel.classList.add("slide-out");
+      }
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tabWrapper = document.querySelector(".tab-wraper");
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  tabWrapper.addEventListener("touchstart", function (event) {
+    touchStartX = event.touches[0].clientX;
+  });
+
+  tabWrapper.addEventListener("touchmove", function (event) {
+    touchEndX = event.touches[0].clientX;
+  });
+
+  tabWrapper.addEventListener("touchend", function () {
+    const touchDiff = touchStartX - touchEndX;
+    if (touchDiff > 0) {
+      nextTab();
+    } else if (touchDiff < 0) {
+      prevTab();
+    }
+  });
 });
